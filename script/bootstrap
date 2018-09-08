@@ -132,7 +132,14 @@ install_dotfiles () {
 
   for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
   do
-    dst="$HOME/.$(basename "${src%.*}")"
+      echo $src
+      dirname $src
+    if [[ "$(dirname $src)" == *"emacs"* ]]
+       then
+           dst="$HOME/.emacs.d/$(basename "${src%.*}")"
+       else
+           dst="$HOME/.$(basename "${src%.*}")"
+    fi
     link_file "$src" "$dst"
   done
 }

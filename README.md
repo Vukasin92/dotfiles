@@ -1,6 +1,8 @@
-# holman does dotfiles
+# Fork of holman does dotfiles
 
-Your dotfiles are how you personalize your system. These are mine.
+This is the fork of holman dotfiles, with my modifications.
+
+Rest of the readme is a copy of holman's dotfiles readme.
 
 I was a little tired of having long alias files and everything strewn about
 (which is extremely common on other dotfiles projects, too). That led to this
