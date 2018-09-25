@@ -239,9 +239,8 @@ for file in ${config_files[*]}
 do
   if [[ "$file" == *install* ]]
     then
-      echo "skipping $file"
+      echo skipping > /dev/null 2>&1
     else
-      echo $file
       source $file
   fi
 done
